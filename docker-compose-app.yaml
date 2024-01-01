@@ -1,0 +1,27 @@
+---
+version: '3.8'
+
+services:
+  cep-example-kafka-streams1:
+    image: cep-example-kafka-streams
+    ports:
+      - "8081:8080"
+    environment:
+      KAFKA_APPLICATION_SERVER: "cep-example-kafka-streams1:8081"
+      KAFKA_BOOTSTRAP_SERVERS: "kafka-1:29092,kafka-2:29093,kafka-3:29094"
+
+  cep-example-kafka-streams2:
+    image: cep-example-kafka-streams
+    ports:
+      - "8082:8080"
+    environment:
+      KAFKA_APPLICATION_SERVER: "cep-example-kafka-streams2:8082"
+      KAFKA_BOOTSTRAP_SERVERS: "kafka-1:29092,kafka-2:29093,kafka-3:29094"
+
+  cep-example-kafka-streams3:
+    image: cep-example-kafka-streams
+    ports:
+      - "8083:8080"
+    environment:
+      KAFKA_APPLICATION_SERVER: "cep-example-kafka-streams3:8083"
+      KAFKA_BOOTSTRAP_SERVERS: "kafka-1:29092,kafka-2:29093,kafka-3:29094"

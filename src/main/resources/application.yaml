@@ -1,0 +1,12 @@
+logging:
+  level:
+    root: info
+  config: classpath:log/logback.xml
+
+spring:
+  kafka:
+    application-server: ${KAFKA_APPLICATION_SERVER:localhost:8080}
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092,localhost:9093,localhost:9094}
+    streams:
+      state:
+        dir: ./state-dir
