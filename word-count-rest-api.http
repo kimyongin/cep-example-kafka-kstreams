@@ -1,5 +1,5 @@
 ### Word Count
-GET http://localhost:8080/count/local/mountains
+GET http://localhost:8083/count/local/small
 Content-Type: application/json
 
 ### Word Count
