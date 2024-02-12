@@ -115,7 +115,10 @@ public class WordCountProcessorDemo {
         Topology topology = streamsBuilder.build();
         topology.addSource("source", "processor-input");
         topology.addProcessor("split", WordSplitProcessor::new, "source");
-        topology.addProcessor("count", () -> new WordCountProcessor("processor-counts"), "split");
+        topology.addSink("repartition", "processor-repartition", STRING_SERDE.serializer(), STRING_SERDE.serializer(), "split");
+
+        topology.addSource("repartition-source", STRING_SERDE.deserializer(), STRING_SERDE.deserializer(), "processor-repartition");
+        topology.addProcessor("count", () -> new WordCountProcessor("processor-counts"), "repartition-source");
         topology.addStateStore(storeBuilder, "count");
         topology.addProcessor("filter", FilterProcessor::new, "count");
         topology.addSink("sink", "processor-output", STRING_SERDE.serializer(), LONG_SERDE.serializer(), "filter");

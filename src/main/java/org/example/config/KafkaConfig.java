@@ -64,7 +64,7 @@ public class KafkaConfig {
 
   @Bean
   NewTopic ProcessorOutputTopic() {
-    return TopicBuilder.name("processor-output")
+    return TopicBuilder.name("processor-repartition")
         .partitions(3)
         .replicas(2)
         .build();
