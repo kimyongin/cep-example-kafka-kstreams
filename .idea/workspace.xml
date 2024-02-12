@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="first">
+    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="ProcessorDemo 에 repartition 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" afterDir="false" />
@@ -228,7 +228,7 @@
       <workItem from="1707652794570" duration="36000" />
       <workItem from="1707653327284" duration="26000" />
       <workItem from="1707701658675" duration="17990000" />
-      <workItem from="1707744349163" duration="1250000" />
+      <workItem from="1707744349163" duration="1561000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -238,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704127682513</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ProcessorDemo 에 repartition 추가">
+      <option name="closed" value="true" />
+      <created>1707745912503</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707745912504</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +277,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="ProcessorDemo 에 repartition 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProcessorDemo 에 repartition 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
