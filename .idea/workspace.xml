@@ -4,31 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose-app.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose-kafka.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/CommonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/KafkaProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountRestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word-count-rest-api.http" afterDir="false" />
+    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountTransformerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/CommonConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/KafkaProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountDSLDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PlainTextProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word-count-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/word-count-rest-api.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +69,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -105,6 +93,9 @@
     "Gradle.cep-example-kafka-kstreams [bootJar].executor": "Run",
     "Gradle.cep-example-kafka-kstreams [build].executor": "Run",
     "Gradle.cep-example-kafka-kstreams [clean].executor": "Run",
+    "HTTP Request.word-count-rest-api | Add Message#1.executor": "Run",
+    "HTTP Request.word-count-rest-api | Add Message#2.executor": "Run",
+    "HTTP Request.word-count-rest-api | Add Message#3.executor": "Run",
     "HTTP Request.word-count-rest-api | Add Message.executor": "Run",
     "HTTP Request.word-count-rest-api | Word Count#1.executor": "Run",
     "HTTP Request.word-count-rest-api | Word Count#2.executor": "Run",
@@ -145,37 +136,21 @@
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.service" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="cep-example-kafka-kstreams [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="word-count-rest-api | Add Message" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="3" requestIdentifier="Add Message" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="word-count-rest-api | Word Count#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" requestIdentifier="Word Count#1" runType="Run single request">
+    <configuration name="word-count-rest-api | Add Message#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="3" requestIdentifier="Add Message#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="word-count-rest-api | Word Count#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="2" requestIdentifier="Word Count#2" runType="Run single request">
+    <configuration name="word-count-rest-api | Add Message#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="4" requestIdentifier="Add Message#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="word-count-rest-api | Add Message#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="5" requestIdentifier="Add Message#3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -197,11 +172,15 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
-      <deployment type="docker-image" />
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
@@ -210,20 +189,20 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose-app.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose-kafka.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="docker-compose-app.yaml" />
+          <option name="sourceFilePath" value="docker-compose-kafka.yaml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.word-count-rest-api | Word Count#2" />
-        <item itemvalue="HTTP Request.word-count-rest-api | Word Count#1" />
-        <item itemvalue="Docker.docker-compose-app.yaml: Compose Deployment" />
-        <item itemvalue="Gradle.cep-example-kafka-kstreams [bootJar]" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#2" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#3" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#1" />
+        <item itemvalue="Docker.docker-compose-kafka.yaml: Compose Deployment" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message" />
       </list>
     </recent_temporary>
@@ -248,12 +227,54 @@
       <workItem from="1703990334713" duration="2883000" />
       <workItem from="1703994230006" duration="599000" />
       <workItem from="1704086344260" duration="1140000" />
-      <workItem from="1704087562887" duration="21582000" />
+      <workItem from="1704087562887" duration="22353000" />
+      <workItem from="1704289899305" duration="168000" />
+      <workItem from="1707649704705" duration="883000" />
+      <workItem from="1707652603275" duration="54000" />
+      <workItem from="1707652794570" duration="36000" />
+      <workItem from="1707653327284" duration="26000" />
+      <workItem from="1707701658675" duration="17990000" />
     </task>
+    <task id="LOCAL-00001" summary="first">
+      <option name="closed" value="true" />
+      <created>1704127682513</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704127682513</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -264,54 +285,9 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/WordCountRestService.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/InteractiveQueryService.class</url>
           <line>132</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/KafkaStreamsRegistry.class</url>
-          <line>58</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/KafkaStreamsRegistry.class</url>
-          <line>65</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.kafka/spring-kafka/3.1.1/80547388849c2e943813f557ee770ea1ec93516e/spring-kafka-3.1.1.jar!/org/springframework/kafka/config/StreamsBuilderFactoryBean.class</url>
-          <line>66</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.kafka/spring-kafka/3.1.1/80547388849c2e943813f557ee770ea1ec93516e/spring-kafka-3.1.1.jar!/org/springframework/kafka/config/StreamsBuilderFactoryBean.class</url>
-          <line>86</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/KafkaStreamsRegistry.class</url>
-          <line>25</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/KafkaStreamsRegistry.class</url>
-          <line>43</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/KafkaStreamsRegistry.class</url>
-          <line>49</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/KafkaStreamsRegistry.class</url>
-          <line>54</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

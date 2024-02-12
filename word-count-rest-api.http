@@ -7,9 +7,19 @@ GET http://localhost:8080/count/inter/mountains
 Content-Type: application/json
 
 ### Add Message
-POST http://localhost:8082/message
-Content-Type: application/json
+POST http://localhost:8080/message/0
+Content-Type: application/plain-text
 
-{
-  "message": "In the small village, nestled in a peaceful valley surrounded by mountains, there was a small stream that flowed through the village center, where villagers often gathered to enjoy the cool water and the soothing sounds of the flowing stream. The village children loved playing near the stream, watching the fish swim in the clear water, and listening to the birds singing in the trees surrounding the village. The village elders often told stories of the village's history, stories about the founders of the village, tales of the hard times the village had endured, and legends of the mysterious mountains surrounding the village."
-}
+a a a a a a a a a a b b b b b
+
+### Add Message
+POST http://localhost:8080/message/1
+Content-Type: application/plain-text
+
+a a a a a a a a a a b b b b b
+
+### Add Message
+POST http://localhost:8080/message/2
+Content-Type: application/plain-text
+
+a a a a a a a a a a b b b b b
