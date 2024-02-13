@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="usecase1 추가">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SampleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/service/count/simple/WordCountDSLDemoTest.java" afterDir="false" />
+    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="word count dsl demo 단위 테스트 추가">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/service/count/simple/WordCountProcessorDemoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usecase1-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/usecase1-rest-api.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word-count-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/word-count-rest-api.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/service/count/simple/WordCountDSLDemoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/service/count/simple/WordCountDSLDemoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,13 +126,17 @@
     "Gradle.DeveloperGuideTest.shouldUpdateStoreForNewKey.executor": "Run",
     "Gradle.DeveloperGuideTest2.executor": "Run",
     "Gradle.SampleTest.shouldFlushStoreForFirstInput.executor": "Debug",
+    "Gradle.Tests in 'org.example.service.count.simple'.executor": "Run",
     "Gradle.WordCountDSLDemoTest.executor": "Run",
     "Gradle.WordCountDSLDemoTest.shouldFlushStoreForFirstInput.executor": "Run",
     "Gradle.WordCountDSLDemoTest.testOneWord.executor": "Run",
+    "Gradle.WordCountProcessorDemoTest.executor": "Run",
     "Gradle.cep-example-kafka-kstreams [bootJar].executor": "Run",
     "Gradle.cep-example-kafka-kstreams [build].executor": "Run",
     "Gradle.cep-example-kafka-kstreams [clean].executor": "Run",
     "Gradle.cep-example-kafka-kstreams [dependencies].executor": "Run",
+    "HTTP Request.usecase1-rest-api | Add ChallengeEvents.executor": "Run",
+    "HTTP Request.usecase1-rest-api | Add GcBasic.executor": "Run",
     "HTTP Request.word-count-rest-api | Add ChallengeEvents.executor": "Run",
     "HTTP Request.word-count-rest-api | Add GcBasic.executor": "Run",
     "HTTP Request.word-count-rest-api | Add Message#1.executor": "Run",
@@ -193,13 +193,38 @@
       <recent name="org.example.service.count.simple" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.service.count.simple" />
       <recent name="org.example" />
       <recent name="org.example.service.usecase1" />
       <recent name="org.example.config" />
       <recent name="org.example.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Gradle.WordCountProcessorDemoTest">
+    <configuration name="Tests in 'org.example.service.count.simple'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.service.count.simple.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="WordCountDSLDemoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -214,30 +239,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.example.service.count.simple.WordCountDSLDemoTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="WordCountDSLDemoTest.shouldFlushStoreForFirstInput" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.service.count.simple.WordCountDSLDemoTest.shouldFlushStoreForFirstInput&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -272,10 +273,31 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="usecase1-rest-api | Add ChallengeEvents" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/usecase1-rest-api.http" index="2" requestIdentifier="Add ChallengeEvents" runType="Run single request">
+    <configuration name="WordCountProcessorDemoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.service.count.simple.WordCountProcessorDemoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="usecase1-rest-api | Add GcBasic" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/usecase1-rest-api.http" requestIdentifier="Add GcBasic" runType="Run single request">
+    <configuration name="usecase1-rest-api | Add ChallengeEvents" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/usecase1-rest-api.http" index="2" requestIdentifier="Add ChallengeEvents" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -316,11 +338,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.usecase1-rest-api | Add ChallengeEvents" />
-        <item itemvalue="HTTP Request.usecase1-rest-api | Add GcBasic" />
+        <item itemvalue="Gradle.WordCountProcessorDemoTest" />
         <item itemvalue="Gradle.WordCountDSLDemoTest" />
+        <item itemvalue="Gradle.Tests in 'org.example.service.count.simple'" />
         <item itemvalue="Gradle.WordCountDSLDemoTest.testOneWord" />
-        <item itemvalue="Gradle.WordCountDSLDemoTest.shouldFlushStoreForFirstInput" />
+        <item itemvalue="HTTP Request.usecase1-rest-api | Add ChallengeEvents" />
       </list>
     </recent_temporary>
   </component>
@@ -409,7 +431,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707812951784</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="word count dsl demo 단위 테스트 추가">
+      <option name="closed" value="true" />
+      <created>1707817756809</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707817756809</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +475,8 @@
     <MESSAGE value="aggregator 로 수정" />
     <MESSAGE value="window count 추가" />
     <MESSAGE value="usecase1 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="usecase1 추가" />
+    <MESSAGE value="word count dsl demo 단위 테스트 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="word count dsl demo 단위 테스트 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
