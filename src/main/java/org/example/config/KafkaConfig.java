@@ -5,6 +5,7 @@ import static org.apache.kafka.streams.StreamsConfig.APPLICATION_SERVER_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.BOOTSTRAP_SERVERS_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG;
+import static org.apache.kafka.streams.StreamsConfig.REPARTITION_PURGE_INTERVAL_MS_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.STATE_DIR_CONFIG;
 
 import java.util.HashMap;
@@ -40,6 +41,7 @@ public class KafkaConfig {
     props.put(APPLICATION_SERVER_CONFIG, applicationServerAddress); // for interactive query service
     props.put(DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
     props.put(DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
+    // props.put(REPARTITION_PURGE_INTERVAL_MS_CONFIG, 604800000); 리파티션에 사용된 토픽을 정리하는 설정 (기본값은 30초)
     // configure the state location to allow tests to use clean state for every run
     props.put(STATE_DIR_CONFIG, stateStoreLocation);
 

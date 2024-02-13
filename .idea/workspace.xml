@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="ProcessorDemo 에 repartition 추가">
+    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="storename 정리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PlainTextProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PlainTextProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountDSLDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountDSLDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountTransformerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountTransformerDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word-count-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/word-count-rest-api.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,8 +196,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#1" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message#2" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#1" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message#3" />
         <item itemvalue="Docker.docker-compose-kafka.yaml: Compose Deployment" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message" />
@@ -250,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707745912504</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="storename 정리">
+      <option name="closed" value="true" />
+      <created>1707785224868</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707785224868</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +289,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
     <MESSAGE value="ProcessorDemo 에 repartition 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="ProcessorDemo 에 repartition 추가" />
+    <MESSAGE value="storename 정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="storename 정리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
