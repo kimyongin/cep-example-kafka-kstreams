@@ -1,5 +1,5 @@
 ### Word Count
-GET http://localhost:8083/count/local/small
+GET http://localhost:8082/count/local/village
 Content-Type: application/json
 
 ### Word Count

@@ -7,7 +7,11 @@
     <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="ProcessorDemo 에 repartition 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PlainTextProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PlainTextProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountDSLDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountDSLDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountTransformerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountTransformerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word-count-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/word-count-rest-api.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,9 +197,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#3" />
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#2" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message#1" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#2" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#3" />
         <item itemvalue="Docker.docker-compose-kafka.yaml: Compose Deployment" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message" />
       </list>

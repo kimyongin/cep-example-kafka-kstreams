@@ -4,6 +4,8 @@ import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.Grouped;
+import org.apache.kafka.streams.kstream.Materialized;
+import org.apache.kafka.streams.kstream.Named;
 import org.apache.kafka.streams.kstream.Produced;
 import org.example.service.WordCountProcessorDemo.FilterProcessor;
 import org.example.service.WordCountProcessorDemo.WordSplitProcessor;
@@ -18,12 +20,12 @@ public class WordCountTransformerDemo {
 
     @Autowired
     void buildPipeline(StreamsBuilder streamsBuilder) {
-        streamsBuilder.<String, String>stream("transformer-input")
+        streamsBuilder.<String, String>stream("streams-app-transformer-input")
             .process(WordSplitProcessor::new)
-            .groupBy((key, word) -> word, Grouped.with(STRING_SERDE, STRING_SERDE))
-            .count()
+            .groupBy((key, word) -> word, Grouped.with("transformer-repartition", STRING_SERDE, STRING_SERDE))
+            .count(Materialized.as("transformer-count"))
             .toStream()
             .process(FilterProcessor::new)
-            .to("transformer-output", Produced.with(STRING_SERDE, LONG_SERDE));
+            .to("streams-app-transformer-output", Produced.with(STRING_SERDE, LONG_SERDE));
     }
 }

@@ -8,6 +8,8 @@ import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.Consumed;
 import org.apache.kafka.streams.kstream.Grouped;
 import org.apache.kafka.streams.kstream.KStream;
+import org.apache.kafka.streams.kstream.Materialized;
+import org.apache.kafka.streams.kstream.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,14 +21,14 @@ public class WordCountDSLDemo {
     @Autowired
     void buildPipeline(StreamsBuilder streamsBuilder) {
         KStream<String, String> messageStream = streamsBuilder
-            .stream("dsl-input", Consumed.with(STRING_SERDE, STRING_SERDE));
+            .stream("streams-app-dsl-input", Consumed.with(STRING_SERDE, STRING_SERDE));
 
         messageStream
             .flatMapValues(value -> Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+")))
-            .groupBy((key, word) -> word, Grouped.with(STRING_SERDE, STRING_SERDE))
-            .count()
+            .groupBy((key, word) -> word, Grouped.with("dsl-repartition", STRING_SERDE, STRING_SERDE))
+            .count(Materialized.as("dsl-count"))
             .filter((key, count) -> count > 50)
-            .toStream().to("dsl-output");
+            .toStream().to("streams-app-dsl-output");
     }
 
 }

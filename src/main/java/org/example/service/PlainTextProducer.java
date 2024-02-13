@@ -37,8 +37,8 @@ public class PlainTextProducer {
 
     @PostMapping("/message/{partition}")
     public void addDslMessage(@PathVariable("partition") Integer partition, @RequestBody String message) {
-        sendMessage("dsl-input", partition, message);
-        sendMessage("processor-input", partition, message);
-        sendMessage("transformer-input", partition, message);
+        sendMessage("streams-app-dsl-input", partition, message);
+        sendMessage("streams-app-processor-input", partition, message);
+        sendMessage("streams-app-transformer-input", partition, message);
     }
 }

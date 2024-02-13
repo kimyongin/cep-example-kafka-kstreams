@@ -48,7 +48,7 @@ public class KafkaConfig {
 
   @Bean
   NewTopic DslInputTopic() {
-    return TopicBuilder.name("dsl-input")
+    return TopicBuilder.name("streams-app-dsl-input")
         .partitions(3)
         .replicas(2)
         .build();
@@ -56,7 +56,7 @@ public class KafkaConfig {
 
   @Bean
   NewTopic ProcessorInputTopic() {
-    return TopicBuilder.name("processor-input")
+    return TopicBuilder.name("streams-app-processor-input")
         .partitions(3)
         .replicas(2)
         .build();
@@ -64,7 +64,7 @@ public class KafkaConfig {
 
   @Bean
   NewTopic ProcessorOutputTopic() {
-    return TopicBuilder.name("processor-repartition")
+    return TopicBuilder.name("streams-app-processor-repartition")
         .partitions(3)
         .replicas(2)
         .build();
@@ -72,7 +72,7 @@ public class KafkaConfig {
 
   @Bean
   NewTopic TransformerInputTopic() {
-    return TopicBuilder.name("transformer-input")
+    return TopicBuilder.name("streams-app-transformer-input")
         .partitions(3)
         .replicas(2)
         .build();

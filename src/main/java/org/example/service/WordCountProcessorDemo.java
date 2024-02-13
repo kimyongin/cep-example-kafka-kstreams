@@ -110,17 +110,17 @@ public class WordCountProcessorDemo {
     @Autowired
     void buildPipeline(StreamsBuilder streamsBuilder) {
         StoreBuilder<KeyValueStore<String, Long>> storeBuilder = Stores.keyValueStoreBuilder(
-            Stores.inMemoryKeyValueStore("processor-counts"), STRING_SERDE, LONG_SERDE);
+            Stores.inMemoryKeyValueStore("processor-count"), STRING_SERDE, LONG_SERDE);
 
         Topology topology = streamsBuilder.build();
-        topology.addSource("source", "processor-input");
+        topology.addSource("source", "streams-app-processor-input");
         topology.addProcessor("split", WordSplitProcessor::new, "source");
-        topology.addSink("repartition", "processor-repartition", STRING_SERDE.serializer(), STRING_SERDE.serializer(), "split");
+        topology.addSink("repartition", "streams-app-processor-repartition", STRING_SERDE.serializer(), STRING_SERDE.serializer(), "split");
 
-        topology.addSource("repartition-source", STRING_SERDE.deserializer(), STRING_SERDE.deserializer(), "processor-repartition");
-        topology.addProcessor("count", () -> new WordCountProcessor("processor-counts"), "repartition-source");
+        topology.addSource("repartition-source", STRING_SERDE.deserializer(), STRING_SERDE.deserializer(), "streams-app-processor-repartition");
+        topology.addProcessor("count", () -> new WordCountProcessor("processor-count"), "repartition-source");
         topology.addStateStore(storeBuilder, "count");
         topology.addProcessor("filter", FilterProcessor::new, "count");
-        topology.addSink("sink", "processor-output", STRING_SERDE.serializer(), LONG_SERDE.serializer(), "filter");
+        topology.addSink("sink", "streams-app-processor-output", STRING_SERDE.serializer(), LONG_SERDE.serializer(), "filter");
     }
 }
