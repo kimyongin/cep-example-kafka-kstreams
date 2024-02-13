@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="window count 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/EventProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/Usecase1DSLDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/model/ChallengeEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/model/GcBasic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/model/GcBasicChallengeEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usecase1-rest-api.http" afterDir="false" />
+    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="usecase1 추가">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SampleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/service/count/simple/WordCountDSLDemoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PlainTextProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/PlainTextProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountDSLDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/WordCountDSLDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/WordCountProcessorDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountTransformerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/WordCountTransformerDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowDSLDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/WordCountWindowDSLDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/WordCountWindowProcessorDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowTransformerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/WordCountWindowTransformerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usecase1-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/usecase1-rest-api.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/word-count-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/word-count-rest-api.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +45,43 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="cep-example-kafka-kstreams" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cep-example-kafka-kstreams" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cep-example-kafka-kstreams" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cep-example-kafka-kstreams" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cep-example-kafka-kstreams" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cep-example-kafka-kstreams" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cep-example-kafka-kstreams" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -71,6 +94,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -101,9 +125,19 @@
     "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
     "Gradle.Build cep-example-kafka-kstreams.executor": "Run",
     "Gradle.Build cep-example-kafka-streams-stateful.executor": "Run",
+    "Gradle.DeveloperGuide2Test.executor": "Run",
+    "Gradle.DeveloperGuideTest.executor": "Run",
+    "Gradle.DeveloperGuideTest.shouldUpdateStoreForNewKey.executor": "Run",
+    "Gradle.DeveloperGuideTest2.executor": "Run",
+    "Gradle.SampleTest.shouldFlushStoreForFirstInput.executor": "Debug",
+    "Gradle.WordCountDSLDemoTest.executor": "Run",
+    "Gradle.WordCountDSLDemoTest.shouldFlushStoreForFirstInput.executor": "Run",
+    "Gradle.WordCountDSLDemoTest.testOneWord.executor": "Run",
     "Gradle.cep-example-kafka-kstreams [bootJar].executor": "Run",
     "Gradle.cep-example-kafka-kstreams [build].executor": "Run",
     "Gradle.cep-example-kafka-kstreams [clean].executor": "Run",
+    "Gradle.cep-example-kafka-kstreams [dependencies].executor": "Run",
+    "HTTP Request.word-count-rest-api | Add ChallengeEvents.executor": "Run",
     "HTTP Request.word-count-rest-api | Add GcBasic.executor": "Run",
     "HTTP Request.word-count-rest-api | Add Message#1.executor": "Run",
     "HTTP Request.word-count-rest-api | Add Message#2.executor": "Run",
@@ -119,10 +153,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Application.executor": "Debug",
+    "Spring Boot.Application.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kimyongin/IdeaProjects/cep-example-kafka-kstreams",
+    "last_opened_file_path": "C:/Users/kimyongin/IdeaProjects/cep-example-kafka-kstreams/src/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -137,39 +173,109 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams\src\test" />
       <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-kstreams" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files\ksqldb-cli" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files" />
-      <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams\src\test\java\org\example" />
       <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams\src\main\java\org\example\service\count\window" />
       <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams\src\main\java\org\example\service\count\simple" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files\ksqldb-server" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files" />
-      <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.service.count.simple" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
       <recent name="org.example.service.usecase1" />
       <recent name="org.example.config" />
       <recent name="org.example.service" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="word-count-rest-api | Add ChallengeEvents" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="2" requestIdentifier="Add ChallengeEvents" runType="Run single request">
+    <configuration name="WordCountDSLDemoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.service.count.simple.WordCountDSLDemoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="word-count-rest-api | Add GcBasic" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="6" requestIdentifier="Add GcBasic" runType="Run single request">
+    <configuration name="WordCountDSLDemoTest.shouldFlushStoreForFirstInput" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.service.count.simple.WordCountDSLDemoTest.shouldFlushStoreForFirstInput&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="word-count-rest-api | Add Message#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="3" requestIdentifier="Add Message#1" runType="Run single request">
+    <configuration name="WordCountDSLDemoTest.testOneWord" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.service.count.simple.WordCountDSLDemoTest.testOneWord&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="word-count-rest-api | Add Message#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="4" requestIdentifier="Add Message#2" runType="Run single request">
+    <configuration name="usecase1-rest-api | Add ChallengeEvents" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/usecase1-rest-api.http" index="2" requestIdentifier="Add ChallengeEvents" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="word-count-rest-api | Add Message#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="5" requestIdentifier="Add Message#3" runType="Run single request">
+    <configuration name="usecase1-rest-api | Add GcBasic" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/usecase1-rest-api.http" requestIdentifier="Add GcBasic" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -210,11 +316,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.word-count-rest-api | Add ChallengeEvents" />
-        <item itemvalue="HTTP Request.word-count-rest-api | Add GcBasic" />
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#1" />
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#2" />
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#3" />
+        <item itemvalue="HTTP Request.usecase1-rest-api | Add ChallengeEvents" />
+        <item itemvalue="HTTP Request.usecase1-rest-api | Add GcBasic" />
+        <item itemvalue="Gradle.WordCountDSLDemoTest" />
+        <item itemvalue="Gradle.WordCountDSLDemoTest.testOneWord" />
+        <item itemvalue="Gradle.WordCountDSLDemoTest.shouldFlushStoreForFirstInput" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707800203712</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="usecase1 추가">
+      <option name="closed" value="true" />
+      <created>1707812951784</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707812951784</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +444,8 @@
     <MESSAGE value="storename 정리" />
     <MESSAGE value="aggregator 로 수정" />
     <MESSAGE value="window count 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="window count 추가" />
+    <MESSAGE value="usecase1 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="usecase1 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -344,6 +459,11 @@
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka-streams/4.1.0/5889b6d4c73e823923a73956130b13f675736a5e/spring-cloud-stream-binder-kafka-streams-4.1.0.jar!/org/springframework/cloud/stream/binder/kafka/streams/InteractiveQueryService.class</url>
           <line>132</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/SampleTest.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
