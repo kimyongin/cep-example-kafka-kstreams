@@ -1,4 +1,4 @@
-package org.example.service;
+package org.example.service.count;
 
 import java.util.Locale;
 import org.apache.kafka.common.serialization.Serde;
@@ -11,10 +11,7 @@ import org.apache.kafka.streams.processor.api.Record;
 import org.apache.kafka.streams.state.KeyValueStore;
 import org.apache.kafka.streams.state.StoreBuilder;
 import org.apache.kafka.streams.state.Stores;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
 public class WordCountProcessorDemo {
 
   private static final Serde<String> STRING_SERDE = Serdes.String();
@@ -107,8 +104,7 @@ public class WordCountProcessorDemo {
     }
   }
 
-  @Autowired
-  void buildPipeline(StreamsBuilder streamsBuilder) {
+  public WordCountProcessorDemo(StreamsBuilder streamsBuilder) {
     StoreBuilder<KeyValueStore<String, Long>> storeBuilder = Stores.keyValueStoreBuilder(
         Stores.inMemoryKeyValueStore("processor-count"), STRING_SERDE, LONG_SERDE);
 

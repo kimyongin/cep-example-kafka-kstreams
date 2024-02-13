@@ -5,11 +5,21 @@ import static org.apache.kafka.streams.StreamsConfig.APPLICATION_SERVER_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.BOOTSTRAP_SERVERS_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG;
-import static org.apache.kafka.streams.StreamsConfig.REPARTITION_PURGE_INTERVAL_MS_CONFIG;
 import static org.apache.kafka.streams.StreamsConfig.STATE_DIR_CONFIG;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.AdminClientConfig;
+import org.apache.kafka.clients.admin.DeleteTopicsResult;
+import org.apache.kafka.clients.admin.ListTopicsResult;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.common.serialization.Serdes;
 import org.springframework.beans.factory.annotation.Value;
@@ -80,4 +90,48 @@ public class KafkaConfig {
         .build();
   }
 
+//  @Bean
+//  void clearTopic() {
+//    Properties config = new Properties();
+//    config.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress); // Kafka 브로커 주소 설정
+//
+//    try (AdminClient admin = AdminClient.create(config)) {
+//      ListTopicsResult listTopics = admin.listTopics();
+//      Set<String> topicNames = listTopics.names().get();
+//
+//      DeleteTopicsResult deleteTopicsResult = admin.deleteTopics(topicNames);
+//      deleteTopicsResult.all().get();
+//
+//      System.out.println("All topics deleted successfully");
+//    } catch (InterruptedException | ExecutionException e) {
+//      e.printStackTrace();
+//    }
+//  }
+//
+//  @Bean
+//  void clearState() {
+//    Path path = Paths.get(stateStoreLocation);
+//
+//    try {
+//      deleteDirectoryRecursively(path);
+//      System.out.println("State directory deleted successfully.");
+//    } catch (IOException e) {
+//      e.printStackTrace();
+//      System.err.println("Error deleting state directory.");
+//    }
+//  }
+//
+//  public static void deleteDirectoryRecursively(Path path) throws IOException {
+//    if (Files.isDirectory(path)) {
+//      // 디렉터리인 경우, 모든 내부 파일 및 디렉터리를 재귀적으로 삭제
+//      Files.list(path).forEach(p -> {
+//        try {
+//          deleteDirectoryRecursively(p);
+//        } catch (IOException e) {
+//          e.printStackTrace();
+//        }
+//      });
+//    }
+//    Files.delete(path); // 파일 또는 빈 디렉터리 삭제
+//  }
 }
