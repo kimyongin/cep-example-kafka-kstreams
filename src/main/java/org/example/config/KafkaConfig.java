@@ -58,38 +58,6 @@ public class KafkaConfig {
     return new KafkaStreamsConfiguration(props);
   }
 
-  @Bean
-  NewTopic DslInputTopic() {
-    return TopicBuilder.name("streams-app-dsl-input")
-        .partitions(3)
-        .replicas(2)
-        .build();
-  }
-
-  @Bean
-  NewTopic ProcessorInputTopic() {
-    return TopicBuilder.name("streams-app-processor-input")
-        .partitions(3)
-        .replicas(2)
-        .build();
-  }
-
-  @Bean
-  NewTopic ProcessorOutputTopic() {
-    return TopicBuilder.name("streams-app-processor-repartition")
-        .partitions(3)
-        .replicas(2)
-        .build();
-  }
-
-  @Bean
-  NewTopic TransformerInputTopic() {
-    return TopicBuilder.name("streams-app-transformer-input")
-        .partitions(3)
-        .replicas(2)
-        .build();
-  }
-
 //  @Bean
 //  void clearTopic() {
 //    Properties config = new Properties();

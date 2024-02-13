@@ -1,4 +1,4 @@
-package org.example.service.count_window;
+package org.example.service.count.window;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -18,7 +18,7 @@ import org.apache.kafka.streams.processor.api.Processor;
 import org.apache.kafka.streams.processor.api.ProcessorContext;
 import org.apache.kafka.streams.processor.api.Record;
 import org.apache.kafka.streams.state.WindowStore;
-import org.example.service.count_window.WordCountWindowProcessorDemo.WordSplitProcessor;
+import org.example.service.count.window.WordCountWindowProcessorDemo.WordSplitProcessor;
 
 public class WordCountWindowTransformerDemo {
 

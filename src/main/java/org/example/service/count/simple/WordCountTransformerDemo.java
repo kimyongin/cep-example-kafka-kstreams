@@ -1,4 +1,4 @@
-package org.example.service.count;
+package org.example.service.count.simple;
 
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
@@ -8,8 +8,8 @@ import org.apache.kafka.streams.kstream.Grouped;
 import org.apache.kafka.streams.kstream.Materialized;
 import org.apache.kafka.streams.kstream.Produced;
 import org.apache.kafka.streams.state.KeyValueStore;
-import org.example.service.count_window.WordCountWindowProcessorDemo.FilterProcessor;
-import org.example.service.count_window.WordCountWindowProcessorDemo.WordSplitProcessor;
+import org.example.service.count.window.WordCountWindowProcessorDemo.FilterProcessor;
+import org.example.service.count.window.WordCountWindowProcessorDemo.WordSplitProcessor;
 
 public class WordCountTransformerDemo {
 

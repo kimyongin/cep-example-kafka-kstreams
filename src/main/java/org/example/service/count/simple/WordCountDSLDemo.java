@@ -1,4 +1,4 @@
-package org.example.service.count;
+package org.example.service.count.simple;
 
 import java.util.Arrays;
 import java.util.Locale;

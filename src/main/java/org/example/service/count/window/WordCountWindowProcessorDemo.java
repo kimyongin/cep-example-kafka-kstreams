@@ -1,5 +1,9 @@
-package org.example.service.count;
+package org.example.service.count.window;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
@@ -12,10 +16,12 @@ import org.apache.kafka.streams.state.KeyValueStore;
 import org.apache.kafka.streams.state.StoreBuilder;
 import org.apache.kafka.streams.state.Stores;
 
-public class WordCountProcessorDemo {
+public class WordCountWindowProcessorDemo {
 
   private static final Serde<String> STRING_SERDE = Serdes.String();
   private static final Serde<Long> LONG_SERDE = Serdes.Long();
+  private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").withZone(ZoneId.systemDefault());
+
 
   public static class WordSplitProcessor implements Processor<String, String, String, String> {
 
@@ -60,18 +66,18 @@ public class WordCountProcessorDemo {
     @Override
     public void process(final Record<String, String> record) {
 
-      String word = record.value();
-      final Long oldValue = kvStore.get(word);
+      String key = record.key();
+      final Long oldValue = kvStore.get(key);
       Long newValue;
 
       if (oldValue == null) {
-        kvStore.put(word, 1L);
+        kvStore.put(key, 1L);
         newValue = 1L;
       } else {
-        kvStore.put(word, oldValue + 1);
+        kvStore.put(key, oldValue + 1);
         newValue = oldValue + 1L;
       }
-      context.forward(new Record<>(word, newValue, record.timestamp()));
+      context.forward(new Record<>(key, newValue, record.timestamp()));
     }
 
     @Override
@@ -104,9 +110,64 @@ public class WordCountProcessorDemo {
     }
   }
 
-  public WordCountProcessorDemo(StreamsBuilder streamsBuilder) {
+  public static class TimeWindowProcessor implements Processor<String, String, String, String> {
+
+    private ProcessorContext<String, String> context;
+    private final Duration windowSize;
+
+    public TimeWindowProcessor(Duration windowSize) {
+      this.windowSize = windowSize;
+    }
+
+    @Override
+    public void init(ProcessorContext<String, String> context) {
+      this.context = context;
+    }
+
+    @Override
+    public void process(Record<String, String> record) {
+      long now = record.timestamp();
+      long windowStart = now - (now % windowSize.toMillis());
+      long windowEnd = windowStart + windowSize.toMillis();
+      String windowedKey = record.key() + "@" + windowStart + "@" + windowEnd;
+      context.forward(new Record<>(windowedKey, record.value(), record.timestamp()));
+    }
+
+    @Override
+    public void close() {
+    }
+  }
+
+  public static class MapProcessor implements Processor<String, Long, String, String> {
+
+    private ProcessorContext<String, String> context;
+
+    @Override
+    public void init(final ProcessorContext<String, String> context) {
+      this.context = context;
+    }
+
+    @Override
+    public void process(final Record<String, Long> record) {
+      String[] parts = record.key().split("@");
+      String key = parts[0];
+      long start = Long.parseLong(parts[1]);
+      long end = Long.parseLong(parts[2]);
+      String value = String.format("{\"key\": \"%s\", \"start\": %s, \"end\": %s, \"count\": %d}",
+          key, formatter.format(Instant.ofEpochMilli(start)), formatter.format(Instant.ofEpochMilli(end)), record.value());
+      context.forward(new Record<>(null, value, record.timestamp()));
+    }
+
+    @Override
+    public void close() {
+      // close any resources managed by this processor
+      // Note: Do not close any StateStores as these are managed by the library
+    }
+  }
+
+  public WordCountWindowProcessorDemo(StreamsBuilder streamsBuilder) {
     StoreBuilder<KeyValueStore<String, Long>> storeBuilder = Stores.keyValueStoreBuilder(
-        Stores.inMemoryKeyValueStore("processor-count"), STRING_SERDE, LONG_SERDE);
+        Stores.inMemoryKeyValueStore("processor-count-windowed"), STRING_SERDE, LONG_SERDE);
 
     Topology topology = streamsBuilder.build();
     topology.addSource("source", "streams-app-processor-input");
@@ -114,9 +175,11 @@ public class WordCountProcessorDemo {
     topology.addSink("repartition", "streams-app-processor-repartition", STRING_SERDE.serializer(), STRING_SERDE.serializer(), "split");
 
     topology.addSource("repartition-source", STRING_SERDE.deserializer(), STRING_SERDE.deserializer(), "streams-app-processor-repartition");
-    topology.addProcessor("count", () -> new WordCountProcessor("processor-count"), "repartition-source");
+    topology.addProcessor("window", () -> new TimeWindowProcessor(Duration.ofSeconds(5)), "repartition-source");
+    topology.addProcessor("count", () -> new WordCountProcessor("processor-count-windowed"), "window");
     topology.addStateStore(storeBuilder, "count");
     topology.addProcessor("filter", FilterProcessor::new, "count");
-    topology.addSink("sink", "streams-app-processor-output", STRING_SERDE.serializer(), LONG_SERDE.serializer(), "filter");
+    topology.addProcessor("map", MapProcessor::new, "filter");
+    topology.addSink("sink", "streams-app-processor-output", STRING_SERDE.serializer(), STRING_SERDE.serializer(), "map");
   }
 }

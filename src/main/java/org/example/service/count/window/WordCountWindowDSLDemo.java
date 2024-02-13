@@ -1,4 +1,4 @@
-package org.example.service.count_window;
+package org.example.service.count.window;
 
 import java.time.Duration;
 import java.time.Instant;

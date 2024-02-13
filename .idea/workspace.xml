@@ -4,16 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="aggregator 로 수정">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowDSLDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowProcessorDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowTransformerDemo.java" afterDir="false" />
+    <list default="true" id="50565ded-66e8-44f8-b918-2a8a33b520ee" name="Changes" comment="window count 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/EventProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/Usecase1DSLDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/model/ChallengeEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/model/GcBasic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/usecase1/model/GcBasicChallengeEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usecase1-rest-api.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/KafkaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountDSLDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountDSLDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountProcessorDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/WordCountTransformerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountTransformerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PlainTextProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/PlainTextProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountDSLDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/WordCountDSLDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/WordCountProcessorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count/WordCountTransformerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/simple/WordCountTransformerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowDSLDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/WordCountWindowDSLDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/WordCountWindowProcessorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/count_window/WordCountWindowTransformerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/count/window/WordCountWindowTransformerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word-count-rest-api.http" beforeDir="false" afterPath="$PROJECT_DIR$/word-count-rest-api.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,67 +92,75 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Docker Image.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose-app.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose-kafka.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build cep-example-kafka-kstreams.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build cep-example-kafka-streams-stateful.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.cep-example-kafka-kstreams [bootJar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.cep-example-kafka-kstreams [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.cep-example-kafka-kstreams [clean].executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.word-count-rest-api | Add Message#1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.word-count-rest-api | Add Message#2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.word-count-rest-api | Add Message#3.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.word-count-rest-api | Add Message.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.word-count-rest-api | Word Count#1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.word-count-rest-api | Word Count#2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.word-count-rest-api | Word Count.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kimyo/IdeaProjects/cep-example-kafka-kstreams&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Docker Image.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose-app.yaml: Compose Deployment.executor": "Run",
+    "Docker.docker-compose-kafka.yaml: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Gradle.Build cep-example-kafka-kstreams.executor": "Run",
+    "Gradle.Build cep-example-kafka-streams-stateful.executor": "Run",
+    "Gradle.cep-example-kafka-kstreams [bootJar].executor": "Run",
+    "Gradle.cep-example-kafka-kstreams [build].executor": "Run",
+    "Gradle.cep-example-kafka-kstreams [clean].executor": "Run",
+    "HTTP Request.word-count-rest-api | Add GcBasic.executor": "Run",
+    "HTTP Request.word-count-rest-api | Add Message#1.executor": "Run",
+    "HTTP Request.word-count-rest-api | Add Message#2.executor": "Run",
+    "HTTP Request.word-count-rest-api | Add Message#3.executor": "Run",
+    "HTTP Request.word-count-rest-api | Add Message.executor": "Run",
+    "HTTP Request.word-count-rest-api | Word Count#1.executor": "Run",
+    "HTTP Request.word-count-rest-api | Word Count#2.executor": "Run",
+    "HTTP Request.word-count-rest-api | Word Count.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Application.executor": "Debug",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kimyongin/IdeaProjects/cep-example-kafka-kstreams",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-kstreams" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files\ksqldb-cli" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful" />
-      <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams\src\main\java\org\example\service\count\window" />
+      <recent name="C:\Users\kimyongin\IdeaProjects\cep-example-kafka-kstreams\src\main\java\org\example\service\count\simple" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files\ksqldb-server" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful\files" />
       <recent name="C:\Users\kimyo\IdeaProjects\cep-example-kafka-streams-stateful" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.service.usecase1" />
+      <recent name="org.example.config" />
       <recent name="org.example.service" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="word-count-rest-api | Add Message" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="3" requestIdentifier="Add Message" runType="Run single request">
+    <configuration name="word-count-rest-api | Add ChallengeEvents" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="2" requestIdentifier="Add ChallengeEvents" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="word-count-rest-api | Add GcBasic" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="6" requestIdentifier="Add GcBasic" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="word-count-rest-api | Add Message#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/word-count-rest-api.http" index="3" requestIdentifier="Add Message#1" runType="Run single request">
@@ -189,21 +208,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose-kafka.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose-kafka.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#2" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add ChallengeEvents" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add GcBasic" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message#1" />
+        <item itemvalue="HTTP Request.word-count-rest-api | Add Message#2" />
         <item itemvalue="HTTP Request.word-count-rest-api | Add Message#3" />
-        <item itemvalue="Docker.docker-compose-kafka.yaml: Compose Deployment" />
-        <item itemvalue="HTTP Request.word-count-rest-api | Add Message" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707790011549</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="window count 추가">
+      <option name="closed" value="true" />
+      <created>1707800203712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707800203712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +329,8 @@
     <MESSAGE value="ProcessorDemo 에 repartition 추가" />
     <MESSAGE value="storename 정리" />
     <MESSAGE value="aggregator 로 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggregator 로 수정" />
+    <MESSAGE value="window count 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="window count 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,0 +1,25 @@
+### Word Count
+GET http://localhost:8082/count/local/village
+Content-Type: application/json
+
+### Word Count
+GET http://localhost:8080/count/inter/mountains
+Content-Type: application/json
+
+### Add Message
+POST http://localhost:8080/message/0
+Content-Type: application/plain-text
+
+a a a a a a a a a a b b b b b
+
+### Add Message
+POST http://localhost:8080/message/1
+Content-Type: application/plain-text
+
+a a a a a a a a a a b b b b b
+
+### Add Message
+POST http://localhost:8080/message/2
+Content-Type: application/plain-text
+
+a a a a a a a a a a b b b b b
