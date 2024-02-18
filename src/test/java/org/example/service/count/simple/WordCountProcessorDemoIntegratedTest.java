@@ -13,6 +13,7 @@ import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.TestInputTopic;
 import org.apache.kafka.streams.TestOutputTopic;
+import org.apache.kafka.streams.Topology;
 import org.apache.kafka.streams.TopologyTestDriver;
 import org.apache.kafka.streams.state.KeyValueStore;
 import org.junit.jupiter.api.AfterEach;
@@ -22,8 +23,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.config.KafkaStreamsConfiguration;
 
-@SpringBootTest()
-class WordCountDSLDemoTest {
+@SpringBootTest
+class WordCountProcessorDemoIntegratedTest {
   private TopologyTestDriver testDriver;
   private TestInputTopic<String, String> inputTopic;
   private TestOutputTopic<String, Long> outputTopic;
@@ -34,13 +35,13 @@ class WordCountDSLDemoTest {
   @BeforeEach
   public void setup() {
     final StreamsBuilder builder = new StreamsBuilder();
-    //Create Actual Stream Processing pipeline
-    new WordCountDSLDemo(builder);
+    Topology topology = builder.build();
+    new WordCountProcessorDemo(topology);
     Properties properties = kafkaConfig.asProperties();
     properties.remove(STATE_DIR_CONFIG);
-    testDriver = new TopologyTestDriver(builder.build(), properties);
-    inputTopic = testDriver.createInputTopic("streams-app-dsl-input", new StringSerializer(), new StringSerializer());
-    outputTopic = testDriver.createOutputTopic("streams-app-dsl-output", new StringDeserializer(), new LongDeserializer());
+    testDriver = new TopologyTestDriver(topology, properties);
+    inputTopic = testDriver.createInputTopic("streams-app-processor-input", new StringSerializer(), new StringSerializer());
+    outputTopic = testDriver.createOutputTopic("streams-app-processor-output", new StringDeserializer(), new LongDeserializer());
   }
 
   @AfterEach
@@ -50,7 +51,7 @@ class WordCountDSLDemoTest {
 
   @Test
   public void testOneWord() {
-    KeyValueStore<String, Long> keyValueStore = testDriver.getKeyValueStore("dsl-count");
+    KeyValueStore<String, Long> keyValueStore = testDriver.getKeyValueStore("processor-count");
 
     inputTopic.pipeInput("A A A A A A A A A A");
     assertThat(keyValueStore.get("a"), equalTo(10L));

@@ -22,8 +22,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.config.KafkaStreamsConfiguration;
 
-@SpringBootTest()
-class WordCountProcessorDemoTest {
+@SpringBootTest
+class WordCountDSLDemoIntegratedTest {
   private TopologyTestDriver testDriver;
   private TestInputTopic<String, String> inputTopic;
   private TestOutputTopic<String, Long> outputTopic;
@@ -34,13 +34,13 @@ class WordCountProcessorDemoTest {
   @BeforeEach
   public void setup() {
     final StreamsBuilder builder = new StreamsBuilder();
-    //Create Actual Stream Processing pipeline
-    new WordCountProcessorDemo(builder);
+    new WordCountDSLDemo(builder);
     Properties properties = kafkaConfig.asProperties();
     properties.remove(STATE_DIR_CONFIG);
+
     testDriver = new TopologyTestDriver(builder.build(), properties);
-    inputTopic = testDriver.createInputTopic("streams-app-processor-input", new StringSerializer(), new StringSerializer());
-    outputTopic = testDriver.createOutputTopic("streams-app-processor-output", new StringDeserializer(), new LongDeserializer());
+    inputTopic = testDriver.createInputTopic("streams-app-dsl-input", new StringSerializer(), new StringSerializer());
+    outputTopic = testDriver.createOutputTopic("streams-app-dsl-output", new StringDeserializer(), new LongDeserializer());
   }
 
   @AfterEach
@@ -50,7 +50,7 @@ class WordCountProcessorDemoTest {
 
   @Test
   public void testOneWord() {
-    KeyValueStore<String, Long> keyValueStore = testDriver.getKeyValueStore("processor-count");
+    KeyValueStore<String, Long> keyValueStore = testDriver.getKeyValueStore("dsl-count");
 
     inputTopic.pipeInput("A A A A A A A A A A");
     assertThat(keyValueStore.get("a"), equalTo(10L));

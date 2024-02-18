@@ -33,6 +33,11 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.apache.kafka:kafka-streams-test-utils:3.6.1")
 
+    testImplementation("org.testcontainers:testcontainers:1.19.5")
+    testImplementation("org.testcontainers:junit-jupiter:1.19.5")
+    testImplementation("org.testcontainers:kafka:1.19.5")
+    testImplementation("org.awaitility:awaitility:4.2.0")
+
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
 }
